@@ -1,0 +1,253 @@
+body
+{
+   overflow-x: hidden;
+}
+
+nav.main-nav
+{
+   position: relative;
+   top: 0;
+   left: 0;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   width: 100vw;
+   height: 100px;
+   box-shadow: var(--box-shadow);
+}
+
+nav.main-nav .container.nav-container
+{
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   width: 90%;
+   padding: 0 40px;
+   color: var(--tertiary-color);
+}
+
+.logo
+{
+   height: 40px;
+   object-fit: cover;
+}
+
+
+nav.main-nav ul
+{
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   right: 250px;
+   width: 50%;
+   white-space: nowrap;
+}
+
+nav.main-nav ul li
+{
+   display: inline;
+   margin: 0 15px;
+}
+
+nav.main-nav ul li a
+{
+   font-weight: bold;
+   text-transform: uppercase;
+}
+
+nav.main-nav ul div
+{
+   margin-top: 10px;
+   background-color: var(--primary-color);
+   box-shadow: var(--box-shadow);
+}
+
+nav.main-nav ul div a
+{
+   display: block;
+   padding: 12px 16px;
+}
+
+nav.main-nav .container.nav-container ul span.dropdown a.dropbtn
+{
+   color: var(--tertiary-color);
+}
+
+
+.dropdown .dropbtn
+{ 
+   border: none;
+   outline: none;
+   padding: 14px 16px;
+   margin: 0;
+   cursor: pointer;
+}
+
+.dropdown .dropbtn:hover .dropdown-content
+{
+   display: block;
+}
+ 
+.dropdown:hover .dropbtn i
+{
+   transform: rotate(180deg);
+   transition: transform .4s ease-in;
+}
+
+.dropdown:hover .dropbtn:hover i
+{
+   transform: rotate(-180deg);
+   transition: transform .4s ease-in;
+}
+ 
+.dropdown-content
+{
+   position: absolute;
+   right: -350px;
+   top: 50px;
+   background-color: var(--secondary-color);
+   min-width: 160px;
+   box-shadow: var(--box-shadow);
+   border-radius: 0 0 var(--base-border-radius) var(--base-border-radius);
+   opacity: 0;
+   transition: opacity .2s ease-in;
+}
+ 
+.dropdown-content.show
+{
+   opacity: 1;
+   pointer-events: all;
+   transition: opacity .2s ease-in;
+}
+
+.dropdown-content a:hover
+{
+   background-color: #ddd;
+}
+
+.dropdown-toggle i
+{
+   margin-left: 5px;
+   transition: transform .3s ease-in;
+}
+
+.dropdown-toggle:hover i
+{
+   transform: rotate(-180deg);
+   transition: transform .3s ease-in;
+}
+
+.dropdown-toggle i.rotated
+{
+   transform: rotate(180deg);
+   transition: transform .3s ease-in;
+}
+
+/* Slider */
+.slider
+{
+   position: relative;
+   background-color: var(--slider-section-bg-color);
+   height: 100vh;
+   width: 100vw;
+}
+
+.slider .slider-container
+{
+   position: absolute;
+   left: 49%;
+   top: 40%;
+   transform: translate(-50%, -50%);
+   padding: 40px;
+   width: 80%;
+   height: 80%;
+}
+
+.slider .slider-container div
+{
+   position: relative;
+   height: 80vh;
+   width: 100vw;
+}
+
+.slider .slider-container img
+{
+   position: absolute;
+   height: 100%;
+   width: 80%;
+   object-fit: cover;
+}
+
+/* First Slide */
+.slider .slider-container div .desc-container
+{
+   position: absolute;
+   top: 50%;
+   left: 58%;
+   transform: translate(-50%, -50%);
+   background-color: var(--desc-container-bg-color);
+   opacity: .9;
+   width: 600px;
+   height: 550px;
+   border-radius: calc(var(--base-border-radius) * 2);
+   padding: 20px;
+}
+
+.slider .slider-container div .desc-container > *
+{
+   color: var(--primary-color);
+}
+
+.slider .slider-container div .desc-container p.head-paragraph
+{
+   padding: 20px 0;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+}
+
+.slider .slider-container div .desc-container h2
+{
+   font-size: 2.6em;
+   font-weight: bold;
+   margin: 10px 0;
+}
+
+.slider .slider-container div .desc-container p.footer-paragraph
+{
+   margin-top: 30px;
+   font-size: 18px;
+   font-weight: 800;
+}
+
+.slider .slider-container div .desc-container .desc-container-link
+{
+   border-bottom: 2px dashed var(--primary-color);
+   font-weight: bold;
+   font-size: 2.3em;
+   white-space: nowrap;
+}
+
+.slider .slider-container div .desc-container .desc-container-btn
+{
+   position: absolute;
+   bottom: 35px;
+   font-weight: bold;
+   font-size: 17px;
+}
+
+/* Second Slide */
+.slider .slider-container div .desc-container:nth-child(2) h2
+{
+   font-weight: 900;
+   font-size: 2.8em;
+}
+
+.slider .slider-container div .desc-container:nth-child(2) ul
+{
+   margin: 10px;  
+   font-size: 20px;
+}
+
+.slider .slider-container div .desc-container:nth-child(2) ul li:not(:last-child)
+{
+   margin-bottom: 10px;
+}
